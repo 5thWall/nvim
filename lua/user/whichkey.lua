@@ -154,7 +154,7 @@ local mappings = {
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
 		d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
 		w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
-		f = { vim.lsp.buf.formatting, "Format" },
+		f = { vim.lsp.buf.format({ async = true }), "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		I = { "<cmd>Mason<cr>", "Mason Info" },
 		j = {
@@ -177,9 +177,9 @@ local mappings = {
 	},
   t = {
     name = "Terminals",
-    p = { "lua _PRY_TOGGLE()<cr>", "Pry" },
-    j = { "lua _NODE_TOGGLE()<cr>", "Node" },
-    n = { "lua _NU_TOGGLE()<cr>", "NuShell" },
+    p = { "<cmd>lua _PRY_TOGGLE()<cr>", "Pry" },
+    j = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
+    n = { "<cmd>lua _NU_TOGGLE()<cr>", "NuShell" },
   },
 }
 
