@@ -149,38 +149,12 @@ local mappings = {
 			"Colorscheme with Preview",
 		},
 	},
-	l = {
-		name = "LSP",
-		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-		d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
-		w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
-		f = { vim.lsp.buf.format, "Format" },
-		i = { "<cmd>LspInfo<cr>", "Info" },
-		I = { "<cmd>Mason<cr>", "Mason Info" },
-		j = {
-			vim.diagnostic.goto_next,
-			"Next Diagnostic",
-		},
-		k = {
-			vim.diagnostic.goto_prev,
-			"Prev Diagnostic",
-		},
-		l = { vim.lsp.codelens.run, "CodeLens Action" },
-		q = { vim.diagnostic.setloclist, "Quickfix" },
-		r = { vim.lsp.buf.rename, "Rename" },
-		s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-		S = {
-			"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-			"Workspace Symbols",
-		},
-		e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
+	t = {
+		name = "Terminals",
+		p = { "<cmd>lua _PRY_TOGGLE()<cr>", "Pry" },
+		j = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
+		n = { "<cmd>lua _NU_TOGGLE()<cr>", "NuShell" },
 	},
-  t = {
-    name = "Terminals",
-    p = { "<cmd>lua _PRY_TOGGLE()<cr>", "Pry" },
-    j = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-    n = { "<cmd>lua _NU_TOGGLE()<cr>", "NuShell" },
-  },
 }
 
 wk.setup(setup)
