@@ -86,7 +86,7 @@ M.whichkey = function(bufnr)
 			},
 			e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
 		},
-	}, { mode = "n", buffer = bufnr })
+	}, { mode = "n", buffer = bufnr, prefix = "<leader>" })
 end
 
 return M
