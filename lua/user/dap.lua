@@ -52,28 +52,30 @@ for _, language in ipairs({ "typescript", "javascript" }) do
 	}
 end
 
-dapui.setup({
-	layouts = {
-		{
-			elements = {
-				"scopes",
-				"breakpoints",
-				"stacks",
-				"watches",
-			},
-			size = 40,
-			position = "left",
-		},
-		{
-			elements = {
-				"repl",
-				"console",
-			},
-			size = 10,
-			position = "bottom",
-		},
-	},
-})
+dapui.setup()
+
+--[[ dapui.setup({ ]]
+--[[ 	layouts = { ]]
+--[[ 		{ ]]
+--[[ 			elements = { ]]
+--[[ 				"scopes", ]]
+--[[ 				"breakpoints", ]]
+--[[ 				"stacks", ]]
+--[[ 				"watches", ]]
+--[[ 			}, ]]
+--[[ 			size = 40, ]]
+--[[ 			position = "left", ]]
+--[[ 		}, ]]
+--[[ 		{ ]]
+--[[ 			elements = { ]]
+--[[ 				"repl", ]]
+--[[ 				"console", ]]
+--[[ 			}, ]]
+--[[ 			size = 10, ]]
+--[[ 			position = "bottom", ]]
+--[[ 		}, ]]
+--[[ 	}, ]]
+--[[ }) ]]
 
 vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
 
